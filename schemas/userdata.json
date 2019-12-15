@@ -1,0 +1,157 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Data that describes a person's professional experience",
+    "type": "object",
+    "required": [
+        "personal_info",
+        "skills",
+        "projects"
+    ],
+    "properties": {
+        "personal_info": {"$ref": "#/definitions/personal_info"},
+        "skills": {
+            "description": "A list of skills a person posseses",
+            "type": "object",
+            "additionalProperties": {"$ref": "#/definitions/skill"}
+        },
+        "projects": {
+            "description": "Projects that a person has worked on",
+            "type": "object",
+            "additionalProperties": {"$ref": "#/definitions/project"}
+        },
+        "organizations": {
+            "description": "Various organizations / companies that are relevant to the person",
+            "type": "object",
+            "additionalProperties": {"$ref": "#/definitions/organization"}
+        }
+    },
+    "definitions": {
+        "personal_info": {
+            "description": "Basic information of the job seeker",
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "description": "Name of the person",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "Location where the person lives",
+                    "type": "string"
+                },
+                "website": {
+                    "description": "Website address of the person's personal webpage",
+                    "type": "string"
+                }
+            }
+        },
+        "skill": {
+            "description": "Description and ability level for skill possessed by a person",
+            "type": "object",
+            "required": [
+                "name",
+                "ability"
+            ],
+            "properties": {
+                "name": {
+                    "description": "Short name of the skill",
+                    "type": "string"
+                },
+                "ability": {
+                    "description": "Ability level in the skill from 1 (beginner) to 10 (master)",
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 10
+                },
+                "description": {
+                    "description": "Description of the skill (optional)",
+                    "type": "string"
+                }
+            }
+        },
+        "project": {
+            "description": "Description of a project that the applicant has worked on",
+            "type": "object",
+            "required": [
+                "headline",
+                "description",
+                "prestige",
+                "skills"
+            ],
+            "properties": {
+                "headline": {
+                    "description": "Short headline that identfies the project",
+                    "type": "string"
+                },
+                "description": {
+                    "decription": "Long description of the project and what the applicant's role",
+                    "type": "string"
+                },
+                "prestige": {
+                    "description": "Amount of prestige associated with the project from 1 (meh) to 10 (world changing)",
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 10
+                },
+                "skills": {
+                    "description": "List of skill used in the course of the project",
+                    "$comment": "This array must contain elements from #skills, but I don't know how to enforce via schema",
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "organization": {
+                    "description": "Name of the organiztion associated with the project",
+                    "$comment": "This must match one of the organizations in the organization element, but I don't know if there is a way to enforce this constraint via a schema",
+                    "type": "string"
+                }
+            }
+        },
+        "organization": {
+            "description": "Organization or Employer that might be affiliated with a project or a person's employment history",
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "description": "Name of the organization",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Long description of the organization and/or the division worked for",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "Location of the organization or where it was interacted with",
+                    "type": "string"
+                }
+            }
+        },
+        "certification": {
+            "description": "Certification obtained from a licencing body or university degree",
+            "type": "object",
+            "required": ["name", "organization"],
+            "properties": {
+                "name": {
+                    "description": "Name of the certification",
+                    "type": "string"
+                },
+                "organization": {
+                    "description": "Name of the organiztion associated with the project",
+                    "$comment": "This must match one of the organizations in the organization element, but I don't know if there is a way to enforce this constraint via a schema",
+                    "type": "string"
+                },
+                "date" : {
+                    "description": "Date that the certification was obtained",
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        }
+    }
+}

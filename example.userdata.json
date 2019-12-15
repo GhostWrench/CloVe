@@ -1,0 +1,163 @@
+{
+    "$schema": "./schemas/userdata.json",
+    "personal_info": {
+        "name": "Daniel Kuntz",
+        "location": "Arvada, Colorado",
+        "website": "https://www.ghostwrench.net"
+    },
+    "skills": {
+        "python": {
+            "name": "Python",
+            "ability": 10
+        },
+        "matlab": {
+            "name": "MATLAB",
+            "ability": 10
+        },
+        "simulink": {
+            "name": "Simulink",
+            "ability": 7
+        },
+        "c": {
+            "name": "C",
+            "description": "The C programming language",
+            "ability": 8
+        },
+        "c++": {
+            "name": "C++",
+            "ability": 5
+        },
+        "javascript":
+        {
+            "name": "JavaScript",
+            "ability": 7
+        },
+        "json": {
+            "name": "JSON",
+            "ability": 7
+        },
+        "html": {
+            "name": "HTML 5",
+            "ability": 4
+        },
+        "css": {
+            "name": "CSS",
+            "ability": 2
+        },
+        "java": {
+            "name": "Java",
+            "ability": 2
+        },
+        "dynamics": {
+            "name": "Dynamic Systems Modeling",
+            "ability": 9
+        },
+        "control": {
+            "name": "Feedback Control Design",
+            "description": "Design of feedback control algorithms for dynamic systems",
+            "ability": 10
+        },
+        "estimation": {
+            "name": "Dynamic Systems Estimation",
+            "description": "Techniques for determining the state of an uncertain system with noisy measurements",
+            "ability": 10
+        },
+        "writing": {
+            "name": "Technical Writing",
+            "ability": 9
+        },
+        "embedded": {
+            "name": "Embedded Programming",
+            "ability": 7
+        },
+        "web": {
+            "name": "Web Design",
+            "ability": 5
+        },
+        "android": {
+            "name": "Android",
+            "ability": 2
+        },
+        "linux": {
+            "name": "Linux",
+            "ability": 7
+        },
+        "windows": {
+            "name": "Microsoft Windows",
+            "ability": 7
+        },
+        "appsscript": {
+            "name": "Google Apps Script",
+            "ability": 6
+        },
+        "officejs": {
+            "name": "Office.js",
+            "ability": 1
+        },
+        "perforce": {
+            "name": "Perforce",
+            "description": "Perforce source control management software",
+            "ability": 6
+        },
+        "git": {
+            "name": "git",
+            "description": "git Source control management software",
+            "ability": 4
+        },
+        "excel": {
+            "name": "Microsoft Excel",
+            "ability": 9
+        },
+        "sheets": {
+            "name": "Google Sheets",
+            "ability": 9
+        },
+        "word": {
+            "name": "Microsoft Word",
+            "ability": 6
+        },
+        "docs": {
+            "name": "Google Docs",
+            "ability": 6
+        },
+        "solidworks": {
+            "name": "SolidWorks",
+            "description": "SolidWorks 3D Modeling Software",
+            "ability": 4
+        },
+        "femap": {
+            "name": "Femap",
+            "description": "Femap FEA mesh generation software",
+            "ability": 4
+        },
+        "nastran": {
+            "name": "NX Nastran",
+            "description": "NX Nastrain finite element analysis software",
+            "ability": 4
+        }
+    },
+    "projects": {
+        "adaptive_observer": {
+            "headline": "Load/Unload Adaptive Observer",
+            "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor BEMF",
+            "prestige": 9,
+            "skills": ["dynamics", "estimation", "matlab", "c"],
+            "organization": "seagate"
+        },
+        "servo_protocol": {
+            "headline": "Servo Code API revisioning",
+            "description": "Helped introduce a system for defining and revisioning the servo processor command interface along with documentation generation",
+            "prestige": 7,
+            "skills": ["python", "c", "json", "html", "css"],
+            "organization": "seagate"
+        }
+    },
+    "organizations": {
+        "seagate": {
+            "name": "Seagate Technology",
+            "description": "Manufactuer of storage products, primarily Hard Disk Drives (HDDs)",
+            "location": "Longmont, Colorado"
+        }
+    }
+
+}
