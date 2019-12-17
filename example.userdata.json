@@ -48,6 +48,14 @@
             "name": "Java",
             "ability": 2
         },
+        "c#": {
+            "name": "C#",
+            "ability": 2
+        },
+        "vba": {
+            "name": "VBA",
+            "ability": 5
+        },
         "dynamics": {
             "name": "Dynamic Systems Modeling",
             "ability": 9
@@ -61,6 +69,27 @@
             "name": "Dynamic Systems Estimation",
             "description": "Techniques for determining the state of an uncertain system with noisy measurements",
             "ability": 10
+        },
+        "robotics": {
+            "name": "Robotics",
+            "ability": 6
+        },
+        "machine_learning": {
+            "name": "Machine Learning",
+            "description": "Set of algorithms that allow computers to extract and classify information from raw data",
+            "ability": 4
+        },
+        "computer_vision": {
+            "name": "Computer Vision",
+            "ability": 5
+        },
+        "algorithms": {
+            "name": "Algorithm Design",
+            "ability": 6
+        },
+        "databases": {
+            "name": "Database Management",
+            "ability": 7
         },
         "writing": {
             "name": "Technical Writing",
@@ -134,30 +163,204 @@
             "name": "NX Nastran",
             "description": "NX Nastrain finite element analysis software",
             "ability": 4
+        },
+        "gd&t": {
+            "name": "Geometric Dimensioning and Tolerancing",
+            "description": "Technique for communicating important tolerances that need to be met in manufacture in mechanical drawings",
+            "ability": 3
+        },
+        "manufacturing": {
+            "name": "Mechanical Design for Manufacture",
+            "ability": 5
         }
     },
     "projects": {
         "adaptive_observer": {
             "headline": "Load/Unload Adaptive Observer",
-            "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor BEMF",
+            "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor BEMF.",
             "prestige": 9,
-            "skills": ["dynamics", "estimation", "matlab", "c"],
+            "skills": ["dynamics", "estimation", "matlab", "c", "embedded"],
             "organization": "seagate"
         },
         "servo_protocol": {
             "headline": "Servo Code API revisioning",
-            "description": "Helped introduce a system for defining and revisioning the servo processor command interface along with documentation generation",
+            "description": "Helped introduce a system for defining and revisioning the servo processor command interface along with documentation generation.",
             "prestige": 7,
             "skills": ["python", "c", "json", "html", "css"],
+            "organization": "seagate"
+        },
+        "helicopter_control": {
+            "headline": "Helicopter Stabilization Controller",
+            "description": "Created a computer model of a helicopter with a main rotor and tail rotor based on a model in a paper on Kane's method, then used state linearization techniques to create a stabilizing controller that was capable of stopping the model's decent towards the ground.",
+            "prestige": 8,
+            "organization": "csm",
+            "skills": ["dynamics", "control", "python", "writing"]
+        },
+        "antenna_design": {
+            "headline": "Mechanical Design of Satellite Antennas",
+            "description": "Using customer specified or in house antenna cavity designs, I created a mechanical designs to fit satellite footprint and tolerances as well as withstand a launch environment",
+            "prestige": 6,
+            "organization": "csm",
+            "skills":["solidworks", "femap", "nastran", "gd&t"]
+        },
+        "asset_detection": {
+            "headline": "Safety Critical Equipment Detection Tool",
+            "description": "With a database of 100 000+ pieces of capital equipment in an oil and gas production facility labeled by expert engineering staff, I wrote an SVM algorithm to assist in scanning for potential equipment that had been missed being marked as safety critical. This algorithm found 20+ instances of un-marked equipment with a low false positive rate (< 50%).",
+            "prestige": 7,
+            "organization": "petrofac",
+            "skills": ["python", "machine_learning", "c#", "databases"]
+        },
+        "maintenance_scheduling": {
+            "headline": "Maintenance Scheduling Algorithm",
+            "description": "Working with a large database of capital equipment and maintenance resourses, I helped design an algorithm that attempted to create an optimal maintenance schedule based on equipment criticality, travel distance and maintenance worker expertise.",
+            "prestige": 6,
+            "organization": "petrofac",
+            "skills": ["python", "c#", "algorithms", "databases"]
+        },
+        "cnc_spreadsheet": {
+            "headline": "Cut to Size G-Code Generating Spreadsheet",
+            "description": "Created a VBA enabled Excel spreadsheet that the user could input parameters for various geometries and frequencies of waveguides and g-code would automatically be generated to load into the CNC mill.",
+            "prestige": 6,
+            "organization": "csm",
+            "skills": ["excel", "vba", "manufacturing"]
+        },
+        "linux_deployment": {
+            "headline": "Linux Server Deployment Tool",
+            "description": "Created a python/fabric script to deploy an Ubuntu 14.04 server with nginx, email, PostgreSQL database and a Django development environment.",
+            "prestige": 5,
+            "skills": ["python", "linux", "web", "databases"],
+            "organization": "qcdata"
+        },
+        "error_detection": {
+            "headline": "Telecommunications Database Error Detection",
+            "description": "Created and implemented a program to detect errors and duplications of telecommunications equipment based on purchasing data. Information was relayed to field engineers who could examine the issue the fields and correct the mistake.",
+            "prestige": 4,
+            "skills": ["python", "databases"],
+            "organization": "qcdata"
+        },
+        "haptic_paddle": {
+            "headline": "Haptic Paddle Hardware and Control",
+            "description": "Manufactured, assembled and programmed a device to provide haptic feedback on a handle using a modified arduino programmed in C and a DC brushless motor.",
+            "prestige": 7,
+            "skills": ["c", "embedded", "control", "robotics", "writing"],
+            "organization": "csm"
+        },
+        "differential_robot": {
+            "headline": "Differential Drive Robot",
+            "description": "Designed a lego robot that explored, mapped and solved a maze. Was one of only 2 robot designs in the class to complete the task successfully.",
+            "prestige": 8,
+            "skills": ["c", "embedded", "algorithms", "control", "robotics", "writing"],
+            "organization": "csm"
+        },
+        "balancing_robot": {
+            "headline": "Balancing Robot Kalman Filter",
+            "description": "Designed an Unscented Kalman Filter for estimating the postion and velocity of a balancing robot from noisy gyroscope and accelerometer readings.",
+            "prestige": 8,
+            "skills": ["python", "estimation", "robotics", "writing"],
+            "organization": "csm"
+        },
+        "crop_predict": {
+            "headline": "Crop Area Prediction",
+            "description": "Using aerial satellite imagery from Landsat-7 and Landsat-8 satellites I created a program to detect agricultural area and predict what crops were being grown based on a trained SVM classifier and a training data set.",
+            "prestige": 6,
+            "skills": ["python", "c++", "computer_vision", "machine_learning", "writing"],
+            "organization": "csm"
+        },
+        "bike_predict": {
+            "headline": "Bicycle Share Use Prediction",
+            "description": "Wrote a program to predict how many bikes would be used in Washington DC's bike share program (Kaggle competition). Working with a team I helped implement a Support Vector Regression (SVR) algorithm that increased prediction accuracy from a linear least squares by a factor of 5.",
+            "prestige": 5,
+            "skills": ["python", "machine_learning", "writing"],
+            "organization": "csm"
+        },
+        "depth_from_defocus": {
+            "headline": "Depth from Defocus",
+            "description": "Created a program that estimaed the depth of a checkerboard using the amount of blur that was created by the camera",
+            "prestige": 3,
+            "skills": ["python", "computer_vision", "writing"],
+            "organization": "csm"
+        },
+        "clove": {
+            "headline": "Automatic Resume Generator",
+            "description": "Developed an automatic, project based resume generator based on the skills listed in a job description. This resume was generated by it!",
+            "prestige": 7,
+            "skills": ["python", "algorithms"]
+        },
+        "seek_subsystem": {
+            "headline": "Lead Seek Sub-system Productization Team",
+            "description": "Took responsibility for ensuring seek peformance for mainline HDD products. This involved tuning seeks, testing performance of various mechanical systems and trouble shooting bugs in the firmware. Maintained competitive seek performance and power with industry competition.",
+            "prestige": 9,
+            "skills": ["matlab", "algorithms", "c", "embedded", "writing"],
+            "organization": "seagate"
+        },
+        "eda": {
+            "headline": "HDD Performance Testing Data Collection Framework",
+            "description": "Created a framework for collecting, archiving and visualizing performance testing data along with a GUI interface to allow everyone easy access to various routines built by the servo engineering group.",
+            "prestige": 8,
+            "skills": ["matlab", "databases"],
+            "organization": "seagate"
+        },
+        "scutte": {
+            "headline": "Correction Technique for Fractional Delay Input Update to Discrete Time Model",
+            "description": "Created a tecnique to correct the discrete time seek distance model for the effects of a fractional delay in the update current. Was implemented in latest products to reduce the amount of position error while seeking.",
+            "prestige": 10,
+            "skills": ["dynamics"],
+            "organization": "seagate"
+        },
+        "lfcf": {
+            "headline": "Low Frequency Controller Feature",
+            "description": "Developed a control feature designed to reduce / eliminate dependence on an external integrator in the control loop. Objective was to eliminate integrator windup after re-enabling the integrator at the end of a seek.",
+            "prestige": 9,
+            "skills": ["control", "c", "embedded"],
+            "organization": "seagate"
+        },
+        "fio_tester": {
+            "headline": "HDD Peformance Test Server",
+            "description": "Set up a linux server that was connected to multiple hard drives and could be used over ssh to test the performance of a HDD over a SATA or SAS interface.",
+            "prestige": 5,
+            "skills": ["linux", "python"],
+            "organization": "seagate"
+        },
+        "power_sort": {
+            "headline": "Power Search Algorithm Improvements",
+            "description": "Improved upon an existing algorithm to lower workload power by creating a search algorithm that took into account both performance and power benefit of a given seek.",
+            "prestige": 6,
+            "skills": ["algorithms", "c", "embedded"],
+            "organization": "seagate"
+        },
+        "power_refactor": {
+            "headline": "Power Reduction Code Refactor",
+            "description": "Refactored and fixed multiple bugs in legacy code responsible for lowering seek power by using the full latency overhead. This allowed for a significant reduction in workload power consumption.",
+            "prestige": 9,
+            "skills": ["c", "algorithms", "dynamics"],
             "organization": "seagate"
         }
     },
     "organizations": {
+        "csm": {
+            "name": "Colorado School of Mines",
+            "description": "University specializing in engineering that is focused on earth, energy and environment",
+            "location": "Golden, Colorado"
+        },
+        "custom_microwave": {
+            "name": "Custom Microwave",
+            "description": "Manufacturer of high precision antenna arrays, mostly for space operation",
+            "location": "Longmont, Colorado"
+        },
+        "petrofac": {
+            "name": "Petrofac Facilites Management Limited",
+            "description": "Oil and gas focused data management company specializing in facilities data management",
+            "location": "Brisbane, Australia"
+        },
+        "qcdata": {
+            "name": "QC Data",
+            "description": "Asset and equipment data management company specializing in the telecommunications industry",
+            "location": "Greenwood Village, Colorado"
+        },
         "seagate": {
             "name": "Seagate Technology",
             "description": "Manufactuer of storage products, primarily Hard Disk Drives (HDDs)",
             "location": "Longmont, Colorado"
         }
     }
-
 }
