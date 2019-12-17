@@ -16,8 +16,18 @@
         },
         "projects": {
             "description": "Projects that a person has worked on",
-            "type": "object",
-            "additionalProperties": {"$ref": "#/definitions/project"}
+            "type": "array",
+            "items": {"$ref": "#/definitions/project"}
+        },
+        "certifications": {
+            "description": "List of certifcations held by the applicant",
+            "type": "array",
+            "items": {"$ref": "#/definitions/certification"}
+        },
+        "work_history": {
+            "description": "List of roles in the order that they should be displayed in the work history section",
+            "type": "array",
+            "items": {"$ref": "#/definitions/role"}
         },
         "organizations": {
             "description": "Various organizations / companies that are relevant to the person",
@@ -141,6 +151,10 @@
                     "description": "Name of the certification",
                     "type": "string"
                 },
+                "description": {
+                    "description": "Short description of the certification",
+                    "type": "string"
+                },
                 "organization": {
                     "description": "Name of the organiztion associated with the project",
                     "$comment": "This must match one of the organizations in the organization element, but I don't know if there is a way to enforce this constraint via a schema",
@@ -148,6 +162,31 @@
                 },
                 "date" : {
                     "description": "Date that the certification was obtained",
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "role": {
+            "description": "A role is a job or contract that was carried out at an organization over a certain date",
+            "type": "object",
+            "required": ["title", "organization", "start_date"],
+            "properties": {
+                "title": {
+                    "description": "Title or short description of your responsibilities at the organization",
+                    "type": "string"
+                },
+                "organization": {
+                    "description": "Key of the organization that the role was carried out for",
+                    "type": "string"
+                },
+                "start_date": {
+                    "description": "Date at which the role started",
+                    "type": "string",
+                    "format": "date"
+                },
+                "end_date": {
+                    "description": "Date at which the role ended",
                     "type": "string",
                     "format": "date"
                 }
