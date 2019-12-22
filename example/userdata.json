@@ -1,9 +1,12 @@
 {
-    "$schema": "../schemas/userdata.json",
+    "$schema": "../schema/userdata.json",
     "personal_info": {
         "name": "Daniel Kuntz",
         "location": "Arvada, Colorado",
-        "website": "https://www.ghostwrench.net"
+        "headline": "Senior Embedded Systems Engineer",
+        "email_address": "daniel.kuntz@fake-address.net",
+        "phone_number": "(555) 555-5555",
+        "website": "https://www.fake-address.net"
     },
     "skills": {
         "python": {

@@ -47,8 +47,21 @@
                     "description": "Name of the person",
                     "type": "string"
                 },
+                "headline": {
+                    "description": "A short description of how the user describes their role at an organization",
+                    "type": "string"
+                },
                 "location": {
                     "description": "Location where the person lives",
+                    "type": "string"
+                },
+                "email_address": {
+                    "description": "Email address for the person",
+                    "type": "string",
+                    "format": "email"
+                },
+                "phone_number": {
+                    "description": "Phone number for the person",
                     "type": "string"
                 },
                 "website": {
@@ -174,6 +187,10 @@
             "properties": {
                 "title": {
                     "description": "Title or short description of your responsibilities at the organization",
+                    "type": "string"
+                },
+                "responsibilities": {
+                    "description": "Long descripton of the responsibilites and day to day work that was carried out as a part of the role",
                     "type": "string"
                 },
                 "organization": {
