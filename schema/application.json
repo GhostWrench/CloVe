@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Description of an application that can be used to generate a resume",
+    "type": "object",
+    "required": [
+        "skills"
+    ],
+    "properties": {
+        "skills": {
+            "description": "List of skills in the job posting",
+            "type": "array",
+            "items": {"$ref": "#/definitions/skill"}
+        },
+        "title": {
+            "description": "Tile of the job as posted in the job listing",
+            "type": "string"
+        },
+        "organization": {
+            "description": "Name of the organization to create the resume for",
+            "type": "string"
+        },
+        "date": {
+            "description": "Date the application to the job was made",
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "definitions": {
+        "skill": {
+            "description": "Skill name and desirability for the job",
+            "required": [
+                "name",
+                "desire"
+            ],
+            "properties": {
+                "name": {
+                    "description": "Name of the skill as it is named in the user data",
+                    "type": "string"
+                },
+                "desire": {
+                    "description": "Level of desire for the skill from 1 (might be nice to have) to 10 (must have)",
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 10
+                }
+            }
+        }
+    }
+}

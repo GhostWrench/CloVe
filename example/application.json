@@ -1,0 +1,38 @@
+{
+    "$schema": "../schema/application.json",
+    "title": "Embedded Systems Engineer",
+    "skills": [
+        {
+            "name": "c",
+            "desire": 8
+        },
+        {
+            "name": "c++",
+            "desire": 6
+        },
+        {
+            "name": "embedded",
+            "desire": 10
+        },
+        {
+            "name": "dynamics",
+            "desire": 8
+        },
+        {
+            "name": "controls",
+            "desire": 10
+        },
+        {
+            "name": "estimation",
+            "desire": 8
+        },
+        {
+            "name": "machine_learning",
+            "desire": 4
+        },
+        {
+            "name": "computer_vision",
+            "desire": 2
+        }
+    ]
+}
