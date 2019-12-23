@@ -15,7 +15,7 @@ class LinkError(Exception):
         )
         super(LinkError, self).__init__(message)
 
-def userdata(userdata_loc):
+def userdata(userdata):
     """Validate the user data provided as JSON
 
     This function will compare against the schema and make sure that all linked
@@ -25,16 +25,13 @@ def userdata(userdata_loc):
 
     Parameters
     ----------
-    userdata_loc: str
-        Location of the user data file to be validated
+    userdata: dict
+        Dictionary of user data to be validated
     """
 
-    # Open the userdata file and schema as json
-    with open(userdata_loc, 'r') as f:
-        userdata = json.load(f)
-
+    # load the schema
     schema_loc = os.path.join(schema_dir(), "userdata.json")
-    with open(schema_loc, 'r') as f:
+    with open(schema_loc, "r") as f:
         schema = json.load(f)
 
     # Create a list of validation errors
@@ -77,7 +74,7 @@ def userdata(userdata_loc):
     if len(validation_errors):
         raise Exception(validation_errors)
 
-def application(application_loc, userdata_loc):
+def application(application, userdata):
     """Validate that an application JSON file is in the correct format
 
     This function will compare the application vs the schema as well as
@@ -87,22 +84,16 @@ def application(application_loc, userdata_loc):
 
     Parameters
     ----------
-    application_loc: str
-        Location of the application JSON file describing the job posting
-    userdata_loc: str
-        Location of the userdata JSON file describing the candidate
+    application: dict
+        Dictionary with the application JSON file describing the job posting
+    userdata: dict
+        Dictionary with the userdata JSON file describing the candidate
     """
     
-    # Open the userdata, application and userdata schema
+    # Open the schema
     schema_loc = os.path.join(schema_dir(), "application.json")
     with open(schema_loc, "r") as f:
         schema = json.load(f)
-    
-    with open(application_loc, "r") as f:
-        application = json.load(f)
-
-    with open(userdata_loc, "r") as f:
-        userdata = json.load(f)
 
     # Create a list of validation errors
     validation_errors = []
