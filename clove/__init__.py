@@ -1,5 +1,5 @@
 """
-Initialization for the clove module for ease of use
+Primary module for the CloVe resume compiler
 """
 
 # Allow clove to import all modules
