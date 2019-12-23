@@ -30,15 +30,15 @@
             "description": "Skill name and desirability for the job",
             "required": [
                 "name",
-                "desire"
+                "need"
             ],
             "properties": {
                 "name": {
                     "description": "Name of the skill as it is named in the user data",
                     "type": "string"
                 },
-                "desire": {
-                    "description": "Level of desire for the skill from 1 (might be nice to have) to 10 (must have)",
+                "need": {
+                    "description": "Level of need for the skill from 1 (might be nice to have) to 10 (must have)",
                     "type": "number",
                     "minimum": 1,
                     "maximum": 10

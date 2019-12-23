@@ -4,35 +4,35 @@
     "skills": [
         {
             "name": "c",
-            "desire": 8
+            "need": 8
         },
         {
             "name": "c++",
-            "desire": 6
+            "need": 6
         },
         {
             "name": "embedded",
-            "desire": 10
+            "need": 10
         },
         {
             "name": "dynamics",
-            "desire": 8
+            "need": 8
         },
         {
             "name": "control",
-            "desire": 10
+            "need": 10
         },
         {
             "name": "estimation",
-            "desire": 8
+            "need": 8
         },
         {
             "name": "machine_learning",
-            "desire": 4
+            "need": 4
         },
         {
             "name": "computer_vision",
-            "desire": 2
+            "need": 2
         }
     ]
 }

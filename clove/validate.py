@@ -4,6 +4,8 @@ import os
 import json
 import jsonschema
 
+from .util import schema_dir
+
 class LinkError(Exception):
     """Raised when there is a key value error in certain linked fields"""
 
@@ -12,12 +14,6 @@ class LinkError(Exception):
             key, object_name
         )
         super(LinkError, self).__init__(message)
-
-def schema_dir():
-    schema_dir = os.path.normpath(os.path.join(
-        os.path.dirname(__file__), "../schema"
-    ))
-    return schema_dir
 
 def userdata(userdata_loc):
     """Validate the user data provided as JSON
