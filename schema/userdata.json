@@ -51,23 +51,17 @@
                     "description": "A short description of how the user describes their role at an organization",
                     "type": "string"
                 },
-                "location": {
-                    "description": "Location where the person lives",
-                    "type": "string"
-                },
-                "email_address": {
-                    "description": "Email address for the person",
-                    "type": "string",
-                    "format": "email"
-                },
-                "phone_number": {
-                    "description": "Phone number for the person",
-                    "type": "string"
-                },
-                "website": {
-                    "description": "Website address of the person's personal webpage",
-                    "type": "string"
+                "contact": {
+                    "description": "Any additional contact info that the user would like to supply",
+                    "type": "object",
+                    "additionalItems": {
+                        "type": "string"
+                    }
                 }
+            },
+            "additionalItems": {
+                "description": "Any other information the candidate would like to add to the resume, (email, phone, etc)",
+                "type": "string"
             }
         },
         "skill": {
