@@ -1,5 +1,5 @@
 """
-This module is the main user callable interface to the resume compiler
+Main user callable interface to the resume compiler
 """
 
 import json
@@ -7,7 +7,8 @@ import argparse
 
 import jinja2
 
-import clove
+from . import validate
+from . import filter
 
 # Global variables
 default_template = "template/markdown_basic.md"
@@ -42,21 +43,21 @@ def main(application_loc, userdata_loc,
         userdata = json.load(f)
 
     # Verify that the loaded files are correctly structured
-    clove.validate.userdata(userdata)
-    clove.validate.application(application, userdata)
+    validate.userdata(userdata)
+    validate.application(application, userdata)
 
     # Filter the project list and replace the full list in userdata
-    filtered_projects = clove.filter.sum_l2(
+    filtered_projects = filter.sum_l2(
         userdata, application, num_projects
     )
     userdata["filtered_projects"] = filtered_projects
 
     # Write the output to the template and then to the output directory
     with open(template_loc, "r") as f:
-        template = jinja2.Template(f)
-    template.render(userdata)
+        template = jinja2.Template(f.read())
+    resume_out = template.render(userdata)
     with open(output_loc, "w") as f:
-        f.write(template)
+        f.write(resume_out)
     
 if __name__ == "__main__":
     
