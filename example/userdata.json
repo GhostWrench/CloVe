@@ -205,7 +205,7 @@
             "headline": "Mechanical Design of Satellite Antennas",
             "description": "Using customer specified or in house antenna cavity designs, I created a mechanical designs to fit satellite footprint and tolerances as well as withstand a launch environment",
             "prestige": 6,
-            "organization": "csm",
+            "organization": "custom_microwave",
             "skills":["solidworks", "femap", "nastran", "gd&t"]
         },
         {

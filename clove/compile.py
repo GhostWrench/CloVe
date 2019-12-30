@@ -14,11 +14,20 @@ from . import filter
 default_template = "template/markdown_basic.md"
 default_output = "../output/resume.md"
 default_num_projects = 6
+default_filter_norm = "mult"
+default_derate = 1.0
+
+filter_map = {
+    "l2": filter.l2,
+    "mult": filter.mult
+}
 
 def main(application_loc, userdata_loc, 
          template_loc=default_template, 
          output_loc=default_output,
-         num_projects=default_num_projects):
+         num_projects=default_num_projects,
+         filter_norm=default_filter_norm,
+         derate=default_derate):
     """Main resume compiling function callable by the user
 
     Parameters
@@ -33,6 +42,11 @@ def main(application_loc, userdata_loc,
         File path to the desired output location
     num_projects: int
         Number of projects to include in the resume
+    filter_norm: str
+        Name of the filter norm function to use
+    derate: float
+        Derate value to be used to promote a variety of skills
+        demonstrated. 1.0 -> No variety, 0.1 -> extreem variety
     """
 
     # Open the provided JSON file locations
@@ -46,18 +60,9 @@ def main(application_loc, userdata_loc,
     validate.userdata(userdata)
     validate.application(application, userdata)
 
-    # Sort the skills by need and include them in the userdata
-    filtered_skills = sorted(application["skills"], 
-        key=lambda x: x["need"], reverse=True
-    )
-    for skill in filtered_skills:
-        skill["ability"] = userdata["skills"][skill["name"]]["ability"]
-        skill["name"] = userdata["skills"][skill["name"]]["name"]
-    userdata["filtered_skills"] = filtered_skills
-
     # Filter the project list and replace the full list in userdata
-    filtered_projects = filter.sum_l2(
-        userdata, application, num_projects
+    filtered_projects = filter.apply(
+        userdata, application, filter_map[filter_norm], num_projects, derate
     )
     userdata["filtered_projects"] = filtered_projects
     # Change tag names to full names
@@ -68,6 +73,15 @@ def main(application_loc, userdata_loc,
         for skill in project["skills"]:
             skill_list.append(userdata["skills"][skill]["name"])
         project["skills"] = ", ".join(skill_list)
+
+    # Sort the skills by need and include them in the userdata
+    filtered_skills = sorted(application["skills"], 
+        key=lambda x: x["need"], reverse=True
+    )
+    for skill in filtered_skills:
+        skill["ability"] = userdata["skills"][skill["name"]]["ability"]
+        skill["name"] = userdata["skills"][skill["name"]]["name"]
+    userdata["filtered_skills"] = filtered_skills
 
     # Update the name of the organization in work history
     for item in userdata["work_history"]:
@@ -108,8 +122,26 @@ if __name__ == "__main__":
         type=int,
         default=default_num_projects
     )
+    parser.add_argument("-n", "--norm",
+        help="Filter that will be applied to score projects",
+        type=str,
+        choices=filter_map.keys(),
+        default=default_filter_norm 
+    )
+    parser.add_argument("-d", "--derate",
+        help="""Derate in scoring used for skills that have already 
+                been included. Must be between 1.0 (no derate) 
+                and 0.1 (massive derate)""",
+        type=float,
+        default=default_derate
+    )
     args = parser.parse_args()
 
+    # Check for errors in the user input
+    if args.derate > 1.0 or args.derate < 0.1:
+        parser.error("Derate value must be between 0.1 and 1.0")
+
     main(args.application_data, args.user_data,
-        args.template, args.output, args.projects)
+        args.template, args.output, args.projects, 
+        args.norm, args.derate)
     
