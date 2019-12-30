@@ -358,31 +358,36 @@
         {
             "title": "Senior Servo Engineer",
             "organization": "seagate",
-            "start_date": "2018-01-01"
+            "start_date": "2018-01-01",
+            "responsibilities": "Building on my previous role, I specialized with a focus on the seeking subsystem. In addition to carrying on many of the same duties from my first role, I also participated in working groups and helped design new technology that advanced seek performance. Towards this end, I developed Matlab and Python tools to stream-line the seek tuning process as well as detect and adapt to mechanical variation. I was also responsible for regression testing and bug-fixes, as well a training of new seek tuners."
         },
         {
             "title": "Servo Engineer II",
             "organization": "seagate",
             "start_date": "2016-01-01",
-            "end_date": "2018-01-01"
+            "end_date": "2018-01-01",
+            "responsibilities": "In this role I was tasked with supporting product development from initial prototype to manufacture. To accomplish this I took on a broad array of tasks. During the prototype phase, I helped integrate various code features developed by the advanced drive development team into each product by: merging code, writing integration tests, and debugging firmware issues that arose. Once the product entered full scale manufacturing I was tasked with troubleshooting yield issues by collecting, parsing, and presenting drive performance data to the team along with recommendations for follow-up actions."
         },
         {
             "title": "Servo Engineering Intern V",
             "organization": "seagate",
             "start_date": "2015-05-01",
-            "end_date": "2015-08-01"
+            "end_date": "2015-08-01",
+            "responsibilities": "Supported the Servo Firmware department by making modifications to the firmware build system along with investigating new control algorithms for use in Load/Unload Operations."
         },
         {
             "title": "Technician II",
             "organization": "qcdata",
             "start_date": "2013-04-01",
-            "end_date": "2014-08-01"
+            "end_date": "2014-08-01",
+            "responsibilities": "Developed Python software to identify issues with and clean up a database with telecommunications asset information used by utilities."
         },
         {
             "title": "Software Developer",
             "organization": "petrofac",
             "start_date": "2012-01-01",
-            "end_date": "2013-01-01"
+            "end_date": "2013-01-01",
+            "responsibilities": "eveloped Python software to automate many of the tasks required in planning and scheduling maintenance of oil and gas production machinery."
         },
         {
             "title": "Mechanical Engineer I",

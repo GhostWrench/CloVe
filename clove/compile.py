@@ -46,11 +46,32 @@ def main(application_loc, userdata_loc,
     validate.userdata(userdata)
     validate.application(application, userdata)
 
+    # Sort the skills by need and include them in the userdata
+    filtered_skills = sorted(application["skills"], 
+        key=lambda x: x["need"], reverse=True
+    )
+    for skill in filtered_skills:
+        skill["ability"] = userdata["skills"][skill["name"]]["ability"]
+        skill["name"] = userdata["skills"][skill["name"]]["name"]
+    userdata["filtered_skills"] = filtered_skills
+
     # Filter the project list and replace the full list in userdata
     filtered_projects = filter.sum_l2(
         userdata, application, num_projects
     )
     userdata["filtered_projects"] = filtered_projects
+    # Change tag names to full names
+    for project in filtered_projects:
+        if project["organization"] is not None:
+            project["organization"] = userdata["organizations"][project["organization"]]["name"]
+        skill_list = []
+        for skill in project["skills"]:
+            skill_list.append(userdata["skills"][skill]["name"])
+        project["skills"] = ", ".join(skill_list)
+
+    # Update the name of the organization in work history
+    for item in userdata["work_history"]:
+        item["organization"] = userdata["organizations"][item["organization"]]["name"]
 
     # Write the output to the template and then to the output directory
     with open(template_loc, "r") as f:

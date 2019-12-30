@@ -24,8 +24,8 @@ SKILLS
 
 | Skill                                    | Ability (of 10) |
 | ---------------------------------------- | --------------- |
-{% for item in skills.items() -%}
-| {{ '%-40s' % item[1].name}} | {{ '%-15s' % item[1].ability}} |
+{% for item in filtered_skills -%}
+| {{ '%-40s' % item.name}} | {{ '%-15s' % item.ability}} |
 {% endfor %}
 
 PROJECTS
@@ -33,16 +33,18 @@ PROJECTS
 {% for item in filtered_projects %}
 ### {{item.headline}}
 #### {% if item.organization %}@ {{item.organization}}{% endif %}
-#### Relevant Skills:{% for skill in item.skills %} {{skill}} {% endfor %}
+#### Relevant Skills: {{item.skills}}
+{%- if item.description is string %}
 {{item.description | wordwrap(78)}}
+{% endif %}
 {% endfor %}
 
 WORK HISTORY
 -------------------------------------------------------------------------------
 {% for item in work_history %}
-{{item.title}} | {{item.organization}}
-{{item.start_date}} to {{item.end_date if item.end_date else 'Present'}}
-{% if item.responsibilities is string %}
+### {{item.title}} @ {{item.organization}}
+#### {{item.start_date}} to {{item.end_date if item.end_date else 'Present'}}
+{%- if item.responsibilities is string %}
 {{item.responsibilities | wordwrap(78) }}
 {% endif %}
 {% endfor %}

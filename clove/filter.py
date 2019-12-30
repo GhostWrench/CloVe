@@ -45,7 +45,7 @@ def sum_l2(userdata, application, limit):
         scores.append(total_score)
 
     # Sort the projects and return the tops ones
-    sorted_indices = [i[0] for i in reversed(sorted(enumerate(scores), key=lambda x:x[1]))]
+    sorted_indices = [i[0] for i in sorted(enumerate(scores), key=lambda x:x[1], reverse=True)]
     sorted_projects = [userdata["projects"][i] for i in sorted_indices]
     min_index = min((len(userdata["projects"]), limit))
     return sorted_projects[0:min_index]
