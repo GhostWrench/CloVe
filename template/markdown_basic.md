@@ -32,7 +32,9 @@ PROJECTS
 -------------------------------------------------------------------------------
 {% for item in filtered_projects %}
 ### {{item.headline}}
-#### {% if item.organization %}@ {{item.organization}}{% endif %}
+{%- if item.organization %}
+#### @ {{item.organization}}
+{% endif -%}
 #### Relevant Skills: {{item.skills}}
 {%- if item.description is string %}
 {{item.description | wordwrap(78)}}

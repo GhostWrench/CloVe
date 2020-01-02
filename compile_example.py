@@ -12,4 +12,5 @@ clove.compile.main(
     output_loc="../output/resume.md",
     num_projects=6,
     filter_norm="mult",
-    derate=0.9)
+    derate=0.9
+)
