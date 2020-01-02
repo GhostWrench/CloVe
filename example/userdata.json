@@ -182,7 +182,7 @@
     "projects": [
         {
             "headline": "Load/Unload Adaptive Observer",
-            "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor BEMF.",
+            "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor Back EMF.",
             "prestige": 9,
             "skills": ["dynamics", "estimation", "matlab", "c", "embedded"],
             "organization": "seagate"
@@ -245,14 +245,14 @@
         },
         {
             "headline": "Haptic Paddle Hardware and Control",
-            "description": "Manufactured, assembled and programmed a device to provide haptic feedback on a handle using a modified arduino programmed in C and a DC brushless motor.",
+            "description": "Manufactured, assembled and programmed a device to provide haptic feedback on a handle using a modified Arduino programmed in C and a DC brush-less motor.",
             "prestige": 7,
             "skills": ["c", "embedded", "control", "robotics", "writing"],
             "organization": "csm"
         },
         {
             "headline": "Differential Drive Robot",
-            "description": "Designed a lego robot that explored, mapped and solved a maze. Was one of only 2 robot designs in the class to complete the task successfully.",
+            "description": "Designed a Lego robot that explored, mapped and solved a maze. Was one of only 2 robot designs in the class to complete the task successfully.",
             "prestige": 8,
             "skills": ["c", "embedded", "algorithms", "control", "robotics", "writing"],
             "organization": "csm"
@@ -343,16 +343,16 @@
     ],
     "certifications": [
         {
-            "name": "B.S. Mechanical Engineering",
-            "organization": "csm",
-            "date": "2009-05-01"
-        },
-        {
             "name": "M.S. Electrical Engineering",
             "description": "Focus on systems science, estimation and control. GPA: 3.671",
             "organization": "csm",
             "date": "2015-12-01"
-        }
+        },
+        {
+            "name": "B.S. Mechanical Engineering",
+            "organization": "csm",
+            "date": "2009-05-01"
+        },
     ],
     "work_history": [
         {
@@ -408,7 +408,7 @@
             "location": "Longmont, Colorado"
         },
         "petrofac": {
-            "name": "Petrofac Facilites Management Limited",
+            "name": "Petrofac Facilities Management Limited",
             "description": "Oil and gas focused data management company specializing in facilities data management",
             "location": "Brisbane, Australia"
         },
