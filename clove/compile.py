@@ -83,8 +83,10 @@ def main(application_loc, userdata_loc,
         skill["name"] = userdata["skills"][skill["name"]]["name"]
     userdata["filtered_skills"] = filtered_skills
 
-    # Update the name of the organization in work history
+    # Update the name of the organization in work history and certifications
     for item in userdata["work_history"]:
+        item["organization"] = userdata["organizations"][item["organization"]]["name"]
+    for item in userdata["certifications"]:
         item["organization"] = userdata["organizations"][item["organization"]]["name"]
 
     # Write the output to the template and then to the output directory
