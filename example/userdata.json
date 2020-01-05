@@ -7,7 +7,7 @@
             "location": "Arvada, Colorado",
             "email_address": "daniel.kuntz@dk-cloud.net",
             "phone_number": "(303) 505-6925",
-            "website": "https://dk-cloud.net"
+            "github": "dktoao"
         }
     },
     "skills": {
@@ -339,6 +339,12 @@
             "prestige": 9,
             "skills": ["c", "algorithms", "dynamics"],
             "organization": "seagate"
+        },
+        {
+            "headline": "Design and Development of an Encrypted Barcode System",
+            "description": "Designed encryption algorithms for generating barcodes as well as an android app to read and verify them.",
+            "prestige": 6,
+            "skills": ["c++", "algorithms", "java", "android"]
         }
     ],
     "certifications": [
