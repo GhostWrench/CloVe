@@ -516,7 +516,10 @@
      <table:table-cell table:style-name="BodyTable.C1" office:value-type="string">
       <text:h text:style-name="Heading_20_1" text:outline-level="1">Experience</text:h>
       {% for item in filtered_projects %}
-      <text:h text:style-name="P8" text:outline-level="2">{{item.headline}} {% if item.organization %}@ {{item.organization}}{% endif %}</text:h>
+      <text:h text:style-name="P8" text:outline-level="2">{{item.headline}}</text:h> 
+      {% if item.organization %}
+      <text:h text:style-name="P8" text:outline-level="2">@ {{item.organization}}</text:h>
+      {% endif %}
       <text:h text:style-name="P11" text:outline-level="3">Relevant Skills: {{item.skills}}</text:h>
       <text:p text:style-name="P3">{{item.description}}</text:p>
       {% endfor %}
