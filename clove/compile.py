@@ -67,7 +67,7 @@ def main(application_loc, userdata_loc,
     userdata["filtered_projects"] = filtered_projects
     # Change tag names to full names
     for project in filtered_projects:
-        if project["organization"] is not None:
+        if "organization" in project.keys():
             project["organization"] = userdata["organizations"][project["organization"]]["name"]
         skill_list = []
         for skill in project["skills"]:

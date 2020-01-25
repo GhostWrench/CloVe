@@ -4,10 +4,10 @@
         "name": "Daniel Kuntz",
         "headline": "Senior Embedded Systems Engineer",
         "contact": {
-            "location": "Arvada, Colorado",
-            "email_address": "daniel.kuntz@dk-cloud.net",
-            "phone_number": "(303) 505-6925",
-            "github": "dktoao"
+            "Location": "Arvada, Colorado",
+            "Email": "daniel.kuntz@dk-cloud.net",
+            "Phone": "(303) 505-6925",
+            "GitHub": "dktoao"
         }
     },
     "skills": {
@@ -86,6 +86,10 @@
         },
         "computer_vision": {
             "name": "Computer Vision",
+            "ability": 5
+        },
+        "image_processing": {
+            "name": "Image Processing",
             "ability": 5
         },
         "algorithms": {
@@ -210,7 +214,7 @@
         },
         {
             "headline": "Development of Safety Critical Equipment Detection Tool",
-            "description": "With a database of 100 000+ pieces of capital equipment in an oil and gas production facility labeled by expert engineering staff, I wrote an SVM algorithm to assist in scanning for potential equipment that had been missed being marked as safety critical. This algorithm found 20+ instances of un-marked equipment with a low false positive rate (< 50%).",
+            "description": "With a database of 100 000+ pieces of capital equipment in an oil and gas production facility labeled by expert engineering staff, I wrote an SVM algorithm to assist in scanning for potential equipment that had been missed being marked as safety critical. This algorithm found 20+ instances of un-marked equipment with a low false positive rate.",
             "prestige": 7,
             "organization": "petrofac",
             "skills": ["python", "machine_learning", "c#", "databases"]
@@ -259,7 +263,7 @@
         },
         {
             "headline": "Observer Design for a Balancing Robot",
-            "description": "Designed an Unscented Kalman Filter for estimating the postion and velocity of a balancing robot from noisy gyroscope and accelerometer readings.",
+            "description": "Designed an Unscented Kalman Filter for estimating the position and velocity of a balancing robot from noisy gyroscope and accelerometer readings.",
             "prestige": 8,
             "skills": ["python", "estimation", "robotics", "writing"],
             "organization": "csm"
@@ -268,7 +272,7 @@
             "headline": "Design and Development of a Crop Area Prediction Algorithm",
             "description": "Using aerial satellite imagery from Landsat-7 and Landsat-8 satellites I created a program to detect agricultural area and predict what crops were being grown based on a trained SVM classifier and a training data set.",
             "prestige": 6,
-            "skills": ["python", "c++", "computer_vision", "machine_learning", "writing"],
+            "skills": ["python", "c++", "image_processing", "machine_learning", "writing"],
             "organization": "csm"
         },
         {
@@ -279,9 +283,9 @@
             "organization": "csm"
         },
         {
-            "headline": "Development of Depth from Defocus Program",
-            "description": "Created a program that estimaed the depth of a checkerboard using the amount of blur that was created by the camera",
-            "prestige": 3,
+            "headline": "Development of Depth from De-focus Program",
+            "description": "Created a program that estimated the depth of a checkerboard using the amount of blur that was created by the camera",
+            "prestige": 6,
             "skills": ["python", "computer_vision", "writing"],
             "organization": "csm"
         },
@@ -293,7 +297,7 @@
         },
         {
             "headline": "Lead of Seek Sub-system Productization Team",
-            "description": "Took responsibility for ensuring seek peformance for mainline HDD products. This involved tuning seeks, testing performance of various mechanical systems and trouble shooting bugs in the firmware. Maintained competitive seek performance and power with industry competition.",
+            "description": "Took responsibility for ensuring seek performance for mainline HDD products. This involved tuning seeks, testing performance of various mechanical systems and trouble shooting bugs in the firmware. Maintained competitive seek performance and power with industry competition.",
             "prestige": 9,
             "skills": ["matlab", "algorithms", "c", "embedded", "writing"],
             "organization": "seagate"
@@ -321,7 +325,7 @@
         },
         {
             "headline": "Setup of an HDD Peformance Test Server",
-            "description": "Set up a linux server that was connected to multiple hard drives and could be used over ssh to test the performance of a HDD over a SATA or SAS interface.",
+            "description": "Set up a Linux server that was connected to multiple hard drives and could be used over ssh to test the performance of a HDD over a SATA or SAS interface.",
             "prestige": 5,
             "skills": ["linux", "python"],
             "organization": "seagate"
@@ -341,8 +345,8 @@
             "organization": "seagate"
         },
         {
-            "headline": "Design and Development of an Encrypted Barcode System",
-            "description": "Designed encryption algorithms for generating barcodes as well as an android app to read and verify them.",
+            "headline": "Design and Development of an Encrypted Bar-code System",
+            "description": "Designed algorithms for generating encrypted QR Codes as well as an android app to read and verify them.",
             "prestige": 6,
             "skills": ["c++", "algorithms", "java", "android"]
         }
@@ -365,21 +369,21 @@
             "title": "Senior Servo Engineer",
             "organization": "seagate",
             "start_date": "2018-01-01",
-            "responsibilities": "Building on my previous role, I specialized with a focus on the seeking subsystem. In addition to carrying on many of the same duties from my first role, I also participated in working groups and helped design new technology that advanced seek performance. Towards this end, I developed Matlab and Python tools to stream-line the seek tuning process as well as detect and adapt to mechanical variation. I was also responsible for regression testing and bug-fixes, as well a training of new seek tuners."
+            "responsibilities": "In addition to the responsibilities from my previous role, I participated in technology development projects that advanced seek performance capability. Towards this end, I developed software tools to stream-line the seek tuning process as well as control algorithms for the drive firmware. I was also responsible for regression testing and bug-fixes of the seek sub-system, as well a training of new seek engineers."
         },
         {
             "title": "Servo Engineer II",
             "organization": "seagate",
             "start_date": "2016-01-01",
             "end_date": "2018-01-01",
-            "responsibilities": "In this role I was tasked with supporting product development from initial prototype to manufacture. To accomplish this I took on a broad array of tasks. During the prototype phase, I helped integrate various code features developed by the advanced drive development team into each product by: merging code, writing integration tests, and debugging firmware issues that arose. Once the product entered full scale manufacturing I was tasked with troubleshooting yield issues by collecting, parsing, and presenting drive performance data to the team along with recommendations for follow-up actions."
+            "responsibilities": "In this role I was tasked with supporting product development from initial prototype to manufacture. During the prototype phase, I helped integrate various code features developed by the advanced technology team into each product by: merging code, writing unit / integration tests, and debugging firmware issues that arose. Once the product entered full scale manufacturing I was tasked with troubleshooting yield and reliability issues."
         },
         {
             "title": "Servo Engineering Intern V",
             "organization": "seagate",
             "start_date": "2015-05-01",
             "end_date": "2015-08-01",
-            "responsibilities": "Supported the Servo Firmware department by making modifications to the firmware build system along with investigating new control algorithms for use in Load/Unload Operations."
+            "responsibilities": "Supported the Servo Firmware department by making modifications to the firmware build system along with investigating new control algorithms for use in loading the heads on to the disk."
         },
         {
             "title": "Technician II",
@@ -393,7 +397,7 @@
             "organization": "petrofac",
             "start_date": "2012-01-01",
             "end_date": "2013-01-01",
-            "responsibilities": "eveloped Python software to automate many of the tasks required in planning and scheduling maintenance of oil and gas production machinery."
+            "responsibilities": "Developed Python software to automate many of the tasks required in planning and scheduling maintenance of oil and gas production machinery."
         },
         {
             "title": "Mechanical Engineer I",
