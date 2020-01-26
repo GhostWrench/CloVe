@@ -2,7 +2,7 @@
     "$schema": "../schema/userdata.json",
     "personal_info": {
         "name": "Daniel Kuntz",
-        "headline": "Senior Embedded Systems Engineer",
+        "headline": "Senior Embedded Software Engineer",
         "contact": {
             "Location": "Arvada, Colorado",
             "Email": "daniel.kuntz@dk-cloud.net",
@@ -257,7 +257,7 @@
         {
             "headline": "Design and Development of a Differential Drive Robot",
             "description": "Designed a Lego robot that explored, mapped and solved a maze. Was one of only 2 robot designs in the class to complete the task successfully.",
-            "prestige": 8,
+            "prestige": 5,
             "skills": ["c", "embedded", "algorithms", "control", "robotics", "writing"],
             "organization": "csm"
         },
@@ -366,20 +366,20 @@
     ],
     "work_history": [
         {
-            "title": "Senior Servo Engineer",
+            "title": "Senior Embedded Software Engineer",
             "organization": "seagate",
             "start_date": "2018-01-01",
             "responsibilities": "In addition to the responsibilities from my previous role, I participated in technology development projects that advanced seek performance capability. Towards this end, I developed software tools to stream-line the seek tuning process as well as control algorithms for the drive firmware. I was also responsible for regression testing and bug-fixes of the seek sub-system, as well a training of new seek engineers."
         },
         {
-            "title": "Servo Engineer II",
+            "title": "Embedded Software Engineer II",
             "organization": "seagate",
             "start_date": "2016-01-01",
             "end_date": "2018-01-01",
-            "responsibilities": "In this role I was tasked with supporting product development from initial prototype to manufacture. During the prototype phase, I helped integrate various code features developed by the advanced technology team into each product by: merging code, writing unit / integration tests, and debugging firmware issues that arose. Once the product entered full scale manufacturing I was tasked with troubleshooting yield and reliability issues."
+            "responsibilities": "In this role I was tasked with supporting product firmware development from initial prototype to manufacture. During the prototype phase, I helped integrate various code features developed by the advanced technology team into each product by: merging code, writing unit / integration tests, and debugging firmware issues that arose. Once the product entered full scale manufacturing I was tasked with troubleshooting yield and reliability issues."
         },
         {
-            "title": "Servo Engineering Intern V",
+            "title": "Embedded Software Engineering Intern V",
             "organization": "seagate",
             "start_date": "2015-05-01",
             "end_date": "2015-08-01",
