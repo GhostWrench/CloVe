@@ -185,21 +185,21 @@
     },
     "projects": [
         {
-            "headline": "Design of Adaptive Observer for HDD Load Operation",
+            "headline": "Adaptive Observer for HDD Load Operation",
             "description": "Created an Kalman filter based observer to determine the location of an HDD actuator during load and unload operations when only noisy velocity measurements are available from the motor Back EMF.",
             "prestige": 9,
             "skills": ["dynamics", "estimation", "matlab", "c", "embedded"],
             "organization": "seagate"
         },
         {
-            "headline": "Development of Embedded Servo Code API Documentation System",
+            "headline": "Embedded Servo Code API Documentation System",
             "description": "Helped introduce a system for defining and revisioning the servo processor command interface along with documentation generation.",
             "prestige": 7,
             "skills": ["python", "c", "json", "html", "css", "writing"],
             "organization": "seagate"
         },
         {
-            "headline": "Design of a Helicopter Stabilization Controller",
+            "headline": "Helicopter Stabilization Controller",
             "description": "Created a computer model of a helicopter with a main rotor and tail rotor based on a model in a paper on Kane's method, then used state linearization techniques to create a stabilizing controller that was capable of stopping the model's decent towards the ground.",
             "prestige": 8,
             "organization": "csm",
@@ -213,139 +213,131 @@
             "skills":["solidworks", "femap", "nastran", "gd&t"]
         },
         {
-            "headline": "Development of Safety Critical Equipment Detection Tool",
+            "headline": "Safety Critical Equipment Detection Tool",
             "description": "With a database of 100 000+ pieces of capital equipment in an oil and gas production facility labeled by expert engineering staff, I wrote an SVM algorithm to assist in scanning for potential equipment that had been missed being marked as safety critical. This algorithm found 20+ instances of un-marked equipment with a low false positive rate.",
             "prestige": 7,
             "organization": "petrofac",
             "skills": ["python", "machine_learning", "c#", "databases"]
         },
         {
-            "headline": "Development of a Maintenance Scheduling Algorithm",
+            "headline": "Maintenance Scheduling Algorithm",
             "description": "Working with a large database of capital equipment and maintenance resourses, I helped design an algorithm that attempted to create an optimal maintenance schedule based on equipment criticality, travel distance and maintenance worker expertise.",
             "prestige": 6,
             "organization": "petrofac",
             "skills": ["python", "c#", "algorithms", "databases"]
         },
         {
-            "headline": "Development of a Cut to Size G-Code Generating Spreadsheet",
+            "headline": "Cut to Size G-Code Generating Spreadsheet",
             "description": "Created a VBA enabled Excel spreadsheet that the user could input parameters for various geometries and frequencies of waveguides and g-code would automatically be generated to load into the CNC mill.",
             "prestige": 6,
             "organization": "csm",
             "skills": ["excel", "vba", "manufacturing"]
         },
         {
-            "headline": "Linux Server Deployment Tool Design and Development",
+            "headline": "Linux Server Deployment Tool",
             "description": "Created a python/fabric script to deploy an Ubuntu 14.04 server with nginx, email, PostgreSQL database and a Django development environment.",
             "prestige": 5,
-            "skills": ["python", "linux", "web", "databases"],
-            "organization": "qcdata"
+            "skills": ["python", "linux", "web", "databases"]
         },
         {
-            "headline": "Development of Telecommunications Database Error Detection Tools",
-            "description": "Created and implemented a program to detect errors and duplications of telecommunications equipment based on purchasing data. Information was relayed to field engineers who could examine the issue the fields and correct the mistake.",
+            "headline": "Database Error Detection Tool",
+            "description": "Created and implemented a program to detect errors and duplications of capital equipment based on purchasing data.",
             "prestige": 4,
             "skills": ["python", "databases"],
-            "organization": "qcdata"
+            "organization": "petrofac"
         },
         {
-            "headline": "Development of Haptic Paddle Hardware and Control",
+            "headline": "Haptic Paddle Hardware and Control",
             "description": "Manufactured, assembled and programmed a device to provide haptic feedback on a handle using a modified Arduino programmed in C and a DC brush-less motor.",
             "prestige": 7,
             "skills": ["c", "embedded", "control", "robotics", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Design and Development of a Differential Drive Robot",
+            "headline": "Maze Solving Differential Drive Robot",
             "description": "Designed a Lego robot that explored, mapped and solved a maze. Was one of only 2 robot designs in the class to complete the task successfully.",
             "prestige": 5,
             "skills": ["c", "embedded", "algorithms", "control", "robotics", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Observer Design for a Balancing Robot",
+            "headline": "Kalman Observer for a Balancing Robot",
             "description": "Designed an Unscented Kalman Filter for estimating the position and velocity of a balancing robot from noisy gyroscope and accelerometer readings.",
             "prestige": 8,
             "skills": ["python", "estimation", "robotics", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Design and Development of a Crop Area Prediction Algorithm",
+            "headline": "Crop Area Prediction Algorithm",
             "description": "Using aerial satellite imagery from Landsat-7 and Landsat-8 satellites I created a program to detect agricultural area and predict what crops were being grown based on a trained SVM classifier and a training data set.",
             "prestige": 6,
             "skills": ["python", "c++", "image_processing", "machine_learning", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Development of Bicycle Share Use Prediction Tool",
+            "headline": "Bicycle Share Use Prediction Tool",
             "description": "Wrote a program to predict how many bikes would be used in Washington DC's bike share program (Kaggle competition). Working with a team I helped implement a Support Vector Regression (SVR) algorithm that increased prediction accuracy from a linear least squares by a factor of 5.",
             "prestige": 5,
             "skills": ["python", "machine_learning", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Development of Depth from De-focus Program",
+            "headline": "Depth from De-focus Program",
             "description": "Created a program that estimated the depth of a checkerboard using the amount of blur that was created by the camera",
             "prestige": 6,
             "skills": ["python", "computer_vision", "writing"],
             "organization": "csm"
         },
         {
-            "headline": "Development of an Automatic Resume Generator",
+            "headline": "Automatic Resume Generator",
             "description": "Developed an automatic, project based resume generator based on the skills listed in a job description. This resume was generated by it!",
             "prestige": 7,
             "skills": ["python", "algorithms"]
         },
         {
-            "headline": "Lead of Seek Sub-system Productization Team",
+            "headline": "Lead of HDD Seek Subsystem Team",
             "description": "Took responsibility for ensuring seek performance for mainline HDD products. This involved tuning seeks, testing performance of various mechanical systems and trouble shooting bugs in the firmware. Maintained competitive seek performance and power with industry competition.",
             "prestige": 9,
             "skills": ["matlab", "algorithms", "c", "embedded", "writing"],
             "organization": "seagate"
         },
         {
-            "headline": "Design and Development of an HDD Data Collection Framework",
+            "headline": "Embedded Data Collection Framework",
             "description": "Created a framework for collecting, archiving and visualizing performance testing data along with a GUI interface to allow everyone easy access to various routines built by the servo engineering group.",
             "prestige": 8,
             "skills": ["matlab", "databases"],
             "organization": "seagate"
         },
         {
-            "headline": "Development of a Correction Technique for Fractional Delay Input to Discrete Time Model",
+            "headline": "Correction Algorithm for Fractional Delay Input to Discrete Time Model",
             "description": "Created a tecnique to correct the discrete time seek distance model for the effects of a fractional delay in the update current. Was implemented in latest products to reduce the amount of position error while seeking.",
             "prestige": 10,
             "skills": ["dynamics", "control", "embedded"],
             "organization": "seagate"
         },
         {
-            "headline": "Design and Implementation of a Low Frequency Controller Feature",
+            "headline": "Low Frequency Controller Feature",
             "description": "Developed a control feature designed to reduce / eliminate dependence on an external integrator in the control loop. Objective was to eliminate integrator windup after re-enabling the integrator at the end of a seek.",
             "prestige": 9,
             "skills": ["control", "c", "embedded"],
             "organization": "seagate"
         },
         {
-            "headline": "Setup of an HDD Peformance Test Server",
+            "headline": "SCSI Device Peformance Test Server",
             "description": "Set up a Linux server that was connected to multiple hard drives and could be used over ssh to test the performance of a HDD over a SATA or SAS interface.",
             "prestige": 5,
             "skills": ["linux", "python"],
             "organization": "seagate"
         },
         {
-            "headline": "Improvement of Power Search Algorithm for HDD Seek System",
-            "description": "Improved upon an existing algorithm to lower workload power by creating a search algorithm that took into account both performance and power benefit of a given seek.",
-            "prestige": 6,
-            "skills": ["algorithms", "c", "embedded"],
-            "organization": "seagate"
-        },
-        {
-            "headline": "Refactor of Power Reduction Code for HDD",
-            "description": "Refactored and fixed multiple bugs in legacy code responsible for lowering seek power by using the full latency overhead. This allowed for a significant reduction in workload power consumption.",
+            "headline": "Improved Seek Power Reduction Code for HDD",
+            "description": "Refactored and fixed multiple bugs in legacy code responsible for non optimal seek power. Lowered drive power consumption by 5% during seek heavy workloads.",
             "prestige": 9,
             "skills": ["c", "algorithms", "dynamics"],
             "organization": "seagate"
         },
         {
-            "headline": "Design and Development of an Encrypted Bar-code System",
+            "headline": "Encrypted Bar-code System",
             "description": "Designed algorithms for generating encrypted QR Codes as well as an android app to read and verify them.",
             "prestige": 6,
             "skills": ["c++", "algorithms", "java", "android"]
@@ -386,21 +378,14 @@
             "responsibilities": "Supported the Servo Firmware department by making modifications to the firmware build system along with investigating new control algorithms for use in loading the heads on to the disk."
         },
         {
-            "title": "Technician II",
-            "organization": "qcdata",
-            "start_date": "2013-04-01",
-            "end_date": "2014-08-01",
-            "responsibilities": "Developed Python software to identify issues with and clean up a database with telecommunications asset information used by utilities."
-        },
-        {
-            "title": "Software Developer",
+            "title": "Contract Software Developer",
             "organization": "petrofac",
             "start_date": "2012-01-01",
-            "end_date": "2013-01-01",
+            "end_date": "2014-04-01",
             "responsibilities": "Developed Python software to automate many of the tasks required in planning and scheduling maintenance of oil and gas production machinery."
         },
         {
-            "title": "Mechanical Engineer I",
+            "title": "Mechanical Engineer",
             "organization": "custom_microwave",
             "start_date": "2009-08-01",
             "end_date": "2011-11-01"
@@ -418,14 +403,9 @@
             "location": "Longmont, Colorado"
         },
         "petrofac": {
-            "name": "Petrofac Facilities Management Limited",
+            "name": "Petrofac Facilities Management",
             "description": "Oil and gas focused data management company specializing in facilities data management",
             "location": "Brisbane, Australia"
-        },
-        "qcdata": {
-            "name": "QC Data",
-            "description": "Asset and equipment data management company specializing in the telecommunications industry",
-            "location": "Greenwood Village, Colorado"
         },
         "seagate": {
             "name": "Seagate Technology",
