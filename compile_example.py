@@ -9,7 +9,7 @@ clove.compile.main(
     "example/application.json", 
     "example/userdata.json",
     template_loc="template/libreoffice_twocol.fodt",
-    output_loc="../output/resume.fodt",
+    output_loc="build/resume.fodt",
     num_projects=6,
     filter_norm="mult",
     derate=0.9

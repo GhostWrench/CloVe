@@ -132,7 +132,7 @@ working for.
 
 ```
 
-## Creating an Application Data File
+### Creating an Application Data File
 An application file is what matches your skills and projects to a job
 description. When you want to compile a resume to match a job you make a 
 JSON file with the following structure:
@@ -156,3 +156,7 @@ JSON file with the following structure:
 
 Use the "need" field to make sure that certain skills are displayed more
 prominently on your resume.
+
+## Running Tests
+
+>> python -m unittest

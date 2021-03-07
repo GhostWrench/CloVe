@@ -48,18 +48,15 @@ def apply_without_skill_derate(userdata, application, normfunc, limit):
 
     # Create a list of project scores
     scores = []
-
     for project in userdata["projects"]:
         total_score = 0
-        num_skills = 0
         for skill in project["skills"]:
             if skill in application_skills:
                 prestige_term = project["prestige"]
                 ability_term = userdata["skills"][skill]["ability"]
                 need_term = application_skills[skill]
                 total_score += normfunc(prestige_term, ability_term, need_term)
-                num_skills += 1
-        scores.append(total_score / num_skills)
+        scores.append(total_score)
 
     # Sort the projects and return the tops ones
     sorted_indices = [i[0] for i in sorted(enumerate(scores), key=lambda x:x[1], reverse=True)]
