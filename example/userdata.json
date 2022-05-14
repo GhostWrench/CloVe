@@ -310,7 +310,7 @@
         },
         {
             "headline": "Correction Algorithm for Fractional Delay Input to Discrete Time Model",
-            "description": "Created a tecnique to correct the discrete time seek distance model for the effects of a fractional delay in the update current. Was implemented in latest products to reduce the amount of position error while seeking.",
+            "description": "Created a technique to correct the discrete time seek distance model for the effects of a fractional delay in the update current. Was implemented in latest products to reduce the amount of position error while seeking.",
             "prestige": 10,
             "skills": ["dynamics", "control", "embedded"],
             "organization": "seagate"
@@ -323,7 +323,7 @@
             "organization": "seagate"
         },
         {
-            "headline": "SCSI Device Peformance Test Server",
+            "headline": "SCSI Device Performance Test Server",
             "description": "Set up a Linux server that was connected to multiple hard drives and could be used over ssh to test the performance of a HDD over a SATA or SAS interface.",
             "prestige": 5,
             "skills": ["linux", "python"],
