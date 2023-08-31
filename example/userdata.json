@@ -7,43 +7,43 @@
             "Location": "Arvada, Colorado",
             "Email": "daniel.kuntz@dk-cloud.net",
             "Phone": "(303) 505-6925",
-            "GitHub": "dktoao"
+            "GitHub": "GhostWrench"
         }
     },
     "skills": {
         "python": {
             "name": "Python",
-            "ability": 10
+            "ability": 8
         },
         "matlab": {
             "name": "MATLAB",
-            "ability": 10
+            "ability": 8
         },
         "simulink": {
             "name": "Simulink",
-            "ability": 7
+            "ability": 5
         },
         "c": {
             "name": "C",
             "description": "The C programming language",
-            "ability": 8
+            "ability": 10
         },
         "c++": {
             "name": "C++",
-            "ability": 5
+            "ability": 6
         },
         "javascript":
         {
             "name": "JavaScript",
-            "ability": 7
+            "ability": 8
         },
         "json": {
             "name": "JSON",
-            "ability": 7
+            "ability": 8
         },
         "html": {
             "name": "HTML 5",
-            "ability": 4
+            "ability": 6
         },
         "css": {
             "name": "CSS",
@@ -59,21 +59,21 @@
         },
         "vba": {
             "name": "VBA",
-            "ability": 5
+            "ability": 2
         },
         "dynamics": {
             "name": "Dynamic Systems Modeling",
-            "ability": 9
+            "ability": 8
         },
         "control": {
             "name": "Feedback Control Design",
             "description": "Design of feedback control algorithms for dynamic systems",
-            "ability": 10
+            "ability": 8
         },
         "estimation": {
             "name": "Dynamic Systems Estimation",
             "description": "Techniques for determining the state of an uncertain system with noisy measurements",
-            "ability": 10
+            "ability": 8
         },
         "robotics": {
             "name": "Robotics",
@@ -94,19 +94,19 @@
         },
         "algorithms": {
             "name": "Algorithm Design",
-            "ability": 6
+            "ability": 8
         },
         "databases": {
             "name": "Database Management",
-            "ability": 7
+            "ability": 4
         },
         "writing": {
             "name": "Technical Writing",
-            "ability": 9
+            "ability": 8
         },
         "embedded": {
             "name": "Embedded Programming",
-            "ability": 7
+            "ability": 10
         },
         "web": {
             "name": "Web Design",
@@ -118,11 +118,11 @@
         },
         "linux": {
             "name": "Linux",
-            "ability": 7
+            "ability": 9
         },
         "windows": {
             "name": "Microsoft Windows",
-            "ability": 7
+            "ability": 6
         },
         "appsscript": {
             "name": "Google Apps Script",
@@ -140,15 +140,15 @@
         "git": {
             "name": "git",
             "description": "git Source control management software",
-            "ability": 4
+            "ability": 8
         },
         "excel": {
             "name": "Microsoft Excel",
-            "ability": 9
+            "ability": 6
         },
         "sheets": {
             "name": "Google Sheets",
-            "ability": 9
+            "ability": 6
         },
         "word": {
             "name": "Microsoft Word",
@@ -161,26 +161,34 @@
         "solidworks": {
             "name": "SolidWorks",
             "description": "SolidWorks 3D Modeling Software",
-            "ability": 4
+            "ability": 2
         },
         "femap": {
             "name": "Femap",
             "description": "Femap FEA mesh generation software",
-            "ability": 4
+            "ability": 2
         },
         "nastran": {
             "name": "NX Nastran",
             "description": "NX Nastrain finite element analysis software",
-            "ability": 4
+            "ability": 2
         },
         "gd&t": {
             "name": "Geometric Dimensioning and Tolerancing",
             "description": "Technique for communicating important tolerances that need to be met in manufacture in mechanical drawings",
-            "ability": 3
+            "ability": 1
         },
         "manufacturing": {
             "name": "Mechanical Design for Manufacture",
+            "ability": 2
+        },
+        "wasm": {
+            "name": "Web Assembly",
             "ability": 5
+        },
+        "buildroot": {
+            "name": "Buildroot",
+            "ability": 6
         }
     },
     "projects": [
@@ -341,6 +349,20 @@
             "description": "Designed algorithms for generating encrypted QR Codes as well as an android app to read and verify them.",
             "prestige": 6,
             "skills": ["c++", "algorithms", "java", "android"]
+        },
+        {
+            "headline": "Maintenance of Linux BSP using Buildroot",
+            "description": "Used Buildroot software to build and update a custom Linux BSP that is the basis of many Wanco systems. Managed changes to hardware drivers, third party libraries needed for software development, patched security vulnerabilities.",
+            "organization": "wanco",
+            "prestige": 10,
+            "skills": ["c", "buildroot", "linux", "embedded"]
+        },
+        {
+            "headline": "DMS display rendering library",
+            "description": "Updated Wanco's NTCIP 1203v3 compliant sign rendering software library (written in C) to be compiled to Web Assembly (via emscripten) for use on the customer web portal for preview of sign displays. This ensured that the exact same message is rendered anywhere that the customer may be editing it from",
+            "organization": "wanco",
+            "prestige": 8,
+            "skills": ["c", "wasm", "embedded", "javascript"]
         }
     ],
     "certifications": [
@@ -359,8 +381,15 @@
     "work_history": [
         {
             "title": "Senior Embedded Software Engineer",
+            "organization": "wanco",
+            "start_date": "2021-10-01",
+            "responsibilities": "Maintained and developed board support packages (BSPs) and software for multiple custom hardware boards."
+        },
+        {
+            "title": "Senior Embedded Software Engineer",
             "organization": "seagate",
             "start_date": "2018-01-01",
+            "end_date": "2021-10-01",
             "responsibilities": "In addition to the responsibilities from my previous role, I participated in technology development projects that advanced seek performance capability. Towards this end, I developed software tools to stream-line the seek tuning process as well as control algorithms for the drive firmware. I was also responsible for regression testing and bug-fixes of the seek sub-system, as well a training of new seek engineers."
         },
         {
@@ -411,6 +440,11 @@
             "name": "Seagate Technology",
             "description": "Manufactuer of storage products, primarily Hard Disk Drives (HDDs)",
             "location": "Longmont, Colorado"
+        },
+        "wanco": {
+            "name": "Wanco",
+            "description": "Manufactuer of dynamic message signs and other smart traffic technologies",
+            "location": "Arvada, Colorado"
         }
     }
 }
