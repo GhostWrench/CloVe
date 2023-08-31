@@ -33,6 +33,14 @@
         {
             "name": "computer_vision",
             "need": 2
+        },
+        {
+            "name": "python",
+            "need": 6
+        },
+        {
+            "name": "matlab",
+            "need": 6
         }
     ]
 }

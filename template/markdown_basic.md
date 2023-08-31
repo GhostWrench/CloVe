@@ -9,7 +9,7 @@
 {{'%-20s' % key}}: {{value}}
 {% endfor %}
 
-CERTIFICATIONS
+EDUCATION
 -------------------------------------------------------------------------------
 {%- for item in certifications %}
 ### {{item.name}} @ {{item.organization}}
