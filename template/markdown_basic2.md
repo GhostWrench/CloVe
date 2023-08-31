@@ -22,18 +22,10 @@ CERTIFICATIONS
 SKILLS
 -------------------------------------------------------------------------------
 
+| Skill                                    | Ability (of 10) |
+| ---------------------------------------- | --------------- |
 {% for item in filtered_skills -%}
-  * {{ '%-40s' % item.name}}
-{% endfor %}
-
-WORK HISTORY
--------------------------------------------------------------------------------
-{% for item in work_history %}
-### {{item.title}} @ {{item.organization}}
-#### {{item.start_date}} to {{item.end_date if item.end_date else 'Present'}}
-{%- if item.responsibilities is string %}
-{{item.responsibilities | wordwrap(78) }}
-{% endif %}
+| {{ '%-40s' % item.name}} | {{ '%-15s' % item.ability}} |
 {% endfor %}
 
 PROJECTS
@@ -46,5 +38,15 @@ PROJECTS
 #### Relevant Skills: {{item.skills}}
 {%- if item.description is string %}
 {{item.description | wordwrap(78)}}
+{% endif %}
+{% endfor %}
+
+WORK HISTORY
+-------------------------------------------------------------------------------
+{% for item in work_history %}
+### {{item.title}} @ {{item.organization}}
+#### {{item.start_date}} to {{item.end_date if item.end_date else 'Present'}}
+{%- if item.responsibilities is string %}
+{{item.responsibilities | wordwrap(78) }}
 {% endif %}
 {% endfor %}
