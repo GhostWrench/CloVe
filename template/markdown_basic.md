@@ -22,8 +22,10 @@ EDUCATION
 SKILLS
 -------------------------------------------------------------------------------
 
+| Skill                                              | Ability (of 10) |
+| -------------------------------------------------- | --------------- |
 {% for item in filtered_skills -%}
-  * {{ '%-40s' % item.name}}
+| {{ '%-50s' % item.name}} | {{ '%-15s' % item.ability}} |
 {% endfor %}
 
 WORK HISTORY

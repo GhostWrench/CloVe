@@ -189,6 +189,14 @@
         "buildroot": {
             "name": "Buildroot",
             "ability": 6
+        },
+        "hardware-interface": {
+            "name": "Hardware Interface Protocols (UART, I2C, SPI)",
+            "ability": 6
+        },
+        "network-interface": {
+            "name": "Network Interface Protocols (TCP/IP, CAN)",
+            "ability": 4
         }
     },
     "projects": [
@@ -355,7 +363,7 @@
             "description": "Used Buildroot software to build and update a custom Linux BSP that is the basis of many Wanco systems. Managed changes to hardware drivers, third party libraries needed for software development, patched security vulnerabilities.",
             "organization": "wanco",
             "prestige": 10,
-            "skills": ["c", "buildroot", "linux", "embedded"]
+            "skills": ["c", "buildroot", "linux", "embedded", "hardware-interface", "network-interface"]
         },
         {
             "headline": "DMS display rendering library",
@@ -417,7 +425,8 @@
             "title": "Mechanical Engineer",
             "organization": "custom_microwave",
             "start_date": "2009-08-01",
-            "end_date": "2011-11-01"
+            "end_date": "2011-11-01",
+            "responsibilities": "Performed vibration testing for high-gain satellite antennas and designed test procedures and test fixtures."
         }
     ],
     "organizations": {
