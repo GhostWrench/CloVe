@@ -27,6 +27,14 @@ Compile an application with the following simple steps:
    $ python -m clove.compile --help
    ```
 
+## Helpful utilities for pdf conversion
+Pandoc can create really nice pdf versions of the markdown resumes. To use
+install pandoc along with texlive-latex-(base|recommended).
+
+```
+$ pandoc resume.md -o resume.pdf
+```
+
 ## Creating a User Data File
 Create a user data file that contains information about your skills, projects,
 work history, certifications and organizations that you have worked with. The 
