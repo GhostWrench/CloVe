@@ -70,6 +70,7 @@ at them (using the "ability" field). Like in the following example:
         }
     }
 ```
+
 ### Organizations
 The organizations object is where you put all the organizations that you will
 link to in your projects, work history and certification sections. 
@@ -164,6 +165,29 @@ JSON file with the following structure:
 
 Use the "need" field to make sure that certain skills are displayed more
 prominently on your resume.
+
+## Docker
+
+To build the Docker container with Docker Compose:
+
+```
+$ docker compose build
+```
+
+To start the container:
+```
+$ docker compose up -d
+```
+
+To attach to a bash terminal in the container:
+```
+$ docker compose exec clove bash
+```
+
+To bring down the container:
+```
+$ docker compose down
+```
 
 ## Running Tests
 

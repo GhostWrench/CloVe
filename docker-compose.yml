@@ -1,0 +1,18 @@
+version: '3'
+services:
+  clove:
+    image: clove:latest
+    build:
+      context: .
+    container_name: clove
+    hostname: clove
+    restart: unless-stopped
+    volumes:
+      - .:/root/clove
+    networks:
+      - clove
+    tty: true
+    stdin_open: true
+networks:
+  clove:
+    name: clove
