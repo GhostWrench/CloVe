@@ -25,7 +25,8 @@ share/python-wheels/
 MANIFEST
 
 # Output from the program
-output/
+output/*
+!output/.gitkeep
 
 # Installer logs
 pip-log.txt
